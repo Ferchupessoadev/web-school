@@ -1,10 +1,5 @@
 @charset "UTF-8";
-$primario: #fff;
-$color-pared: white;
-$font-title: "Oswald";
-$color-school: rgb(69, 6, 6);
-$box_shadow-cards: rgb(46, 3, 3);
-$font-text: "Times New Roman";
+@import "./components/variables.scss";
 
 * {
   margin: 0;
@@ -33,6 +28,7 @@ body::-webkit-scrollbar-thumb {
 @import "./components/nav.scss";
 @import "./components/nav-responsive.scss";
 @import "./components/presentation.scss";
+@import "./components/posts.scss";
 
 
 /* diseño de la seccion de informacion de las tecnicaturas */
@@ -267,23 +263,23 @@ body::-webkit-scrollbar-thumb {
 // TODO: images.
 @keyframes cambiarImagen {
   0% {
-    background: url('/img/img-basic-cycle/img1.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img1.jpg') no-repeat center center/cover;
   }
 
   25% {
-    background: url('/img/img-basic-cycle/img2.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img2.jpg') no-repeat center center/cover;
   }
 
   50% {
-    background: url('/img/img-basic-cycle/img3.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img3.jpg') no-repeat center center/cover;
   }
 
   75% {
-    background: url('/img/img-basic-cycle/img4.png') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img4.png') no-repeat center center/cover;
   }
 
   100% {
-    background: url('/img/img-basic-cycle/img5.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img5.jpg') no-repeat center center/cover;
   }
 }
 @import './components/form_contact.scss';
