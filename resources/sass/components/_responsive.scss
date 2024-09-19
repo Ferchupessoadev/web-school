@@ -8,19 +8,6 @@
       }
     }
   }
-
-  .section-school {
-    z-index: 100;
-    .container-text {
-      p {
-        font-size: 30px;
-      }
-
-      h1 {
-        font-size: 35px;
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 900px) and (min-width: 700px) {
@@ -34,10 +21,6 @@
 
 @media only screen and (max-width: 950px) {
   .nav {
-    display: none;
-  }
-
-  .div-incribirse {
     display: none;
   }
 
@@ -87,20 +70,6 @@
     .nav__ul-responsive {
       height: calc(100vh - 60px);
       border-bottom: 1px solid black;
-    }
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .section-school {
-    .container-text {
-      p {
-        font-size: 25px;
-      }
-
-      h1 {
-        font-size: 25px;
-      }
     }
   }
 }
