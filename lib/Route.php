@@ -2,8 +2,40 @@
 
 namespace lib;
 
+/**
+ * Router class for handling static and dynamic routes in PHP.
+ *
+ * This class facilitates the definition and management of both static and dynamic routes
+ * for your PHP application. It supports routing to anonymous functions as well as to
+ * controller methods. Ensure you have a `resources/views` folder with a `404.php` file to handle
+ * errors when routes are not found.
+ *
+ * Usage examples:
+ *
+ * 1. Routing to a Closure:
+ * ```php
+ * Route::get('/', function () {
+ *     return json_encode(['message' => 'Hello World']);
+ * });
+ * ```
+ *
+ * 2. Routing to a Controller Method:
+ * ```php
+ * Route::get('/', [HomeController::class, 'index']);
+ * ```
+ *
+ * Call `Route::start()` to initiate the routing process.
+ *
+ * @author https://github.com/Ferchupessoadev
+ * @license MIT
+ * @version 1.0
+ */
 class Route
 {
+    /*
+     * * routes
+     * @var array
+     */
     private static $routes = [];
 
     /*
