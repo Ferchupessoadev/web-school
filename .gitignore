@@ -19,3 +19,4 @@
 .env.test.example
 .env.example.example
 .env.production.example
+*.css.map
