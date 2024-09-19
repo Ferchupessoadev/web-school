@@ -1,6 +1,4 @@
 .nav {
-  position: absolute;
-  top: 0px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -9,6 +7,7 @@
   padding: 10px 15px;
   height: 120px;
   z-index: 1000;
+  background: linear-gradient(to bottom, $secondary, $dark);
 
   img {
     position: absolute;
@@ -45,7 +44,7 @@
         width: max-content;
         height: max-content;
         list-style: none;
-        background: rgb(116, 10, 10);
+        background: $primary;
         border: 1px solid black;
         opacity: 0.4;
         .events-ul__li {
@@ -73,7 +72,7 @@
 
     .nav__li:hover > .nav__li-a,
     .nav__li:hover > .nav__li-a p {
-      color: rgb(131, 11, 11);
+      color: $primary;
     }
   }
 }

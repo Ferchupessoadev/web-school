@@ -14,16 +14,5 @@ const navResponsive = document.querySelector(".nav-responsive");
 btnNav.addEventListener("click", () => {
 	const navBar = navResponsive.children[2]
 	navBar.classList.toggle("toogle-nav");
-	if (navBar.className == "nav__ul-responsive toogle-nav") {
-		navResponsive.style.position = "fixed";
-		setTimeout(() => {
-			navResponsive.style.background = "rgb(100, 3, 3)";
-		}, 480);
-	} else {
-		navResponsive.style.position = "absolute";
-		setTimeout(() => {
-			navResponsive.style.background = "transparent"
-		}, 480);
-	};
 	navBar.style.transition = "transform 0.5s ease-in-out";
 });

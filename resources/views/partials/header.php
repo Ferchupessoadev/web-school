@@ -22,7 +22,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Indic+Siyaq+Numbers&family=Noto+Sans+Math&family=Oswald:wght@500&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 	<!-- CSS Custom -->
-	<link rel="stylesheet" href="/assets/sass/style.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/f845b9182b.js" crossorigin="anonymous"></script>
 	<!-- libreria animate.css -->

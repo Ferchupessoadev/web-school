@@ -11,22 +11,22 @@ require 'partials/header.php';
 	</div>
 </section>
 
-<section class="section-container">
-	<div class="section-container__cards">
-		<div class="cards__card">
-			<img class="card__img" src="/favicon.ico" alt="Logo de la Escuela Técnica 2 Concordia">
+<section class="section-posts">
+	<div class="section-posts__cards">
+		<a class="cards__card" href="/">
+			<img class="card__img" src="/assets/img/banner.jpg" alt="Logo de la Escuela Técnica 2 Concordia">
 			<div class="card__text">
 				<h2 class="text__h2">Noticia 1</h2>
 				<p class="text__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem.</p>
 			</div>
-		</div>
-		<div class="cards__card">
-			<img class="card__img" src="/favicon.ico" alt="Logo de la Escuela Técnica 2 Concordia">
+		</a>
+		<a class="cards__card" href="/">
+			<img class="card__img" src="/assets/img/banner.jpg" alt="Logo de la Escuela Técnica 2 Concordia">
 			<div class="card__text">
 				<h2 class="text__h2">Noticia 2</h2>
 				<p class="text__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem.</p>
 			</div>
-		</div>
+		</a>
 	</div>
 </section>
 

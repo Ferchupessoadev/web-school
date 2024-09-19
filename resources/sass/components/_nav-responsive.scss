@@ -4,9 +4,9 @@
   width: 100%;
   align-items: center;
   background: transparent;
-  position: absolute;
-  z-index: 10000;
   border-bottom: 2px solid transparent;
+  background: $dark;
+
   .btn-x-nav {
     display: none;
   }
@@ -28,6 +28,8 @@
     flex-direction: column;
     top: 60px;
     width: 100%;
+    background: $dark;
+
     .nav__li-responsive {
       width: 100%;
       text-align: center;
