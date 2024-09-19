@@ -20,9 +20,9 @@ class view
 
         extract($data);
 
-        if (file_exists('../views/' . $view . '.php')) {
+        if (file_exists('../resources/views/' . $view . '.php')) {
             ob_start();
-            include '../views/' . $view . '.php';
+            include '../resources/views/' . $view . '.php';
             $content = ob_get_clean();
 
             return $content;

@@ -90,7 +90,7 @@ class Route
 
         http_response_code(404);
         ob_start();
-        include '../views/404.php';
+        include '../resources/views/404.php';
         $content = ob_get_clean();
         echo $content;
     }
