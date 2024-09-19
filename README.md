@@ -1,7 +1,7 @@
 # Web de la escuela E.E.T 2 "Independencia".
 
 
-![logo de la escuela técnica 2](./favicon.ico)
+![logo de la escuela técnica 2](./public_html/favicon.ico)
 
 
 ## Skills
