@@ -16,12 +16,12 @@ require 'partials/welcome.php';
 	<a class="section-news__a-info" href="/publicaciones">+ Noticias</a>
 </section>
 
-<section class="secton-history">
-	<h5>Historia</h5>
-	<div class="container-flex">
-		
-	</div>
-</section>
+<!-- <section class="secton-history"> -->
+<!-- 	<h5>Historia</h5> -->
+<!-- 	<div class="container-flex"> -->
+<!-- 		 -->
+<!-- 	</div> -->
+<!-- </section> -->
 
 <section class="section-basic-cycle">
 	<div class="bg-color"></div>
