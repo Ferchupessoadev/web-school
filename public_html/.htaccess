@@ -1,0 +1,9 @@
+Options -multiviews -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Redirige el acceso al archivo .env a una página de error personalizada
+RewriteCond %{REQUEST_URI} ^/\.env$
+RewriteRule .* /404.php [L]

@@ -1,0 +1,81 @@
+.article-form {
+    padding: 10px;
+    width: 90%;
+    height: max-content;
+    margin:100px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-form__p {
+  padding: 10px;
+  font-family: $font-text;
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+
+  .form__div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+
+    .form__input {
+      width: 100%;
+      color: #000;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 5px ;
+      background: rgba(255, 255, 255, 0.5);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+
+    .form__textarea {
+      width: 100%;
+      color: #000;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.5);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+
+    .form__button {
+      width: max-content;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.5);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      color: #000;
+    }
+
+    .form__button:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .form__div--button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
