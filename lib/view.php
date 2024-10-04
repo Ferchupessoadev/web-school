@@ -1,7 +1,24 @@
 <?php
 
-namespace app;
+namespace lib;
 
+/**
+ * View class for rendering views
+ *
+ * This class facilitates the rendering of views for your PHP application.
+ * for default, it will render views in the `resources/views` folder.
+ *
+ * example:
+ *
+ * ```php
+ * $view = new view();
+ * return $view->view('home', ['title' => 'E.E.T N°2 Independencia', 'description' => 'Escuela Técnica N°2 Independencia']);
+ * ```
+ *
+ * @author https://github.com/Ferchupessoadev
+ * @license MIT
+ * @version 1.0
+ */
 class view
 {
     /**
@@ -24,7 +41,6 @@ class view
             ob_start();
             include '../resources/views/' . $view . '.php';
             $content = ob_get_clean();
-
             return $content;
         } else {
             return 'View ' . $view . ' not found';

@@ -1,6 +1,8 @@
 <?php
 
-namespace app\Controllers;
+namespace App\Controllers;
+
+use App\Models\NewsModel;
 
 class newsController extends Controller
 {
@@ -14,10 +16,25 @@ class newsController extends Controller
         return $this->view('news', $data);
     }
 
-    public function show(int $id): string
+    /**
+     * Show
+     * @param string $title
+     * @return string
+     */
+    public function show(string $title): string
     {
-		
+        $newsModel = new NewsModel();
+        $data = $newsModel->getNewsByTitle($title);
 
-        return $this->view('news');
+        if (empty($data)) {
+            $data = [
+                'title' => 'E.E.T N°2 Independencia - 404',
+                'description' => 'Pagina no encontrada'
+            ];
+
+            return $this->view('404', $data);
+        }
+
+        return $this->view('posts', $data);
     }
 }

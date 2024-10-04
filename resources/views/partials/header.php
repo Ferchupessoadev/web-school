@@ -34,7 +34,7 @@
 <body class="body">
 	<!-- barra de navegación - escritorio -->
 	<nav class="nav">
-		<img style="width: 80px;height: 80px;" src="/favicon.ico" alt="Escuela tecnica 2 Independencia">
+		<img src="/favicon.ico" alt="Escuela tecnica 2 Independencia">
 		<ul class="nav__ul">
 			<li class="nav__li"><a href="/" class="nav__li-a">Inicio</a></li>
 				<li class="nav__li"><a href="/publicaciones" class="nav__li-a">Noticias</a></li>

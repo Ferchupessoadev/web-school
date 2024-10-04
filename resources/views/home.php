@@ -4,25 +4,53 @@ require 'partials/welcome.php';
 ?>
 <!-- noticias -->
 <section class="section-news">
-	<h5>Noticias</h5>
-	<div class="container-flex">
-		<div class="card">
-			<img class="card__img-news" src="/assets/img/news/no-hay-clases.png" alt="">
-			<p class="card__p-title card__p-news">title</p>
-			<p class="card__p-time card__p-news">mayo 17,2023</p>
-			<p class="card__p-info card__p-news">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum reiciendis nesciunt maxime optio odit explicabo nobis! Omnis dolore praesentium aperiam.</p>
+	<h5>Noticias recientes</h5>
+	<div class="section-news__div">
+		<div href="/publicaciones" class="section-news__div-primary">
+			<img class="section-news__img" src="/assets/img/tecnicaturas/computacion.jpg" alt="Alt de la imagen">
+			<div class="section-news__div-primary-info">
+				<h2 class="section-news__h6">Noticia</h2>
+				<p class="section-news__p-date"><i class="fa-solid fa-calendar-days"></i> 20/10/2021</p>
+			</div>
+			<a href="/publicaciones" class="section-news__a">+ Info</a>
+		</div>
+		<div class="section-news__div-secondary">
+			<div class="section-news__news--small">
+				<img class="section-news__img--small" src="/assets/img/tecnicaturas/computacion.jpg" alt="">
+				<div class="section-news__div-info--small">
+					<h2 class="section-news__h2--small">Noticia</h2>
+					<p class="section-news__p-date--small"><i class="fa-solid fa-calendar-days"></i> 20/10/2021</p>
+					<a href="/publicaciones" class="section-news__a--small">+ Info</a>
+				</div>
+			</div>
+			<div class="section-news__news--small">
+				<img class="section-news__img--small" src="/assets/img/tecnicaturas/computacion.jpg" alt="">
+				<div class="section-news__div-info--small">
+					<h2 class="section-news__h2--small">Noticia</h2>
+					<p class="section-news__p-date--small"><i class="fa-solid fa-calendar-days"></i> 20/10/2021</p>
+					<a href="/publicaciones" class="section-news__a--small">+ Info</a>
+				</div>
+			</div>
+			<div class="section-news__news--small">
+				<img class="section-news__img--small" src="/assets/img/tecnicaturas/computacion.jpg" alt="">
+				<div class="section-news__div-info--small">
+					<h2 class="section-news__h2--small">Noticia</h2>
+					<p class="section-news__p-date--small"><i class="fa-solid fa-calendar-days"></i> 20/10/2021</p>
+					<a href="/publicaciones" class="section-news__a--small">+ Info</a>
+				</div>
+			</div>
+			<div class="section-news__news--small">
+				<img class="section-news__img--small" src="/assets/img/tecnicaturas/computacion.jpg" alt="">
+				<div class="section-news__div-info--small">
+					<h2 class="section-news__h2--small">Noticia</h2>
+					<p class="section-news__p-date--small"><i class="fa-solid fa-calendar-days"></i> 20/10/2021</p>
+					<a href="/publicaciones" class="section-news__a--small">+ Info</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<a class="section-news__a-info" href="/publicaciones">+ Noticias</a>
 </section>
-
-<!-- <section class="secton-history"> -->
-<!-- 	<h5>Historia</h5> -->
-<!-- 	<div class="container-flex"> -->
-<!-- 		 -->
-<!-- 	</div> -->
-<!-- </section> -->
-
 <section class="section-basic-cycle">
 	<div class="bg-color"></div>
 	<h4 class="section-basic-cycle__h4">Talleres de ciclo básico</h4>

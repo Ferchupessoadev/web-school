@@ -15,7 +15,7 @@ namespace lib;
  * 1. Routing to a Closure:
  * ```php
  * Route::get('/', function () {
- *     return json_encode(['message' => 'Hello World']);
+ *			return json_encode(['message' => 'Hello World']);
  * });
  * ```
  *
@@ -36,7 +36,14 @@ class Route
      * * routes
      * @var array
      */
-    private static $routes = [];
+    private static $routes = [
+        'GET' => [],
+        'POST' => [],
+        'PUT' => [],
+        'DELETE' => []
+    ];
+
+    protected static $request;
 
     /*
      * * create route GET
@@ -65,8 +72,9 @@ class Route
      * * Response
      * @param $response
      */
-    public static function Response($response): void
+    public static function Response($response, $statusCode = 200): void
     {
+		http_response_code($statusCode);
         if (is_array($response) || is_object($response)) {
             header('Content-Type: application/json');
             echo json_encode($response);
@@ -92,15 +100,27 @@ class Route
             return;
         }
 
+        if ($method === 'POST') {
+            if ($input = file_get_contents('php://input')) {
+                $jsonData = json_decode($input, true);
+                if (json_last_error() === JSON_ERROR_NONE) {
+                    $_POST = array_merge($_POST, $jsonData);
+                }
+            }
+            self::$request = $_POST;
+        } else {
+            self::$request = $_GET;
+        }
+
         foreach (self::$routes[$method] as $route => $callback) {
-            if (strpos($uri, '{')) {
-                $pattern = '#^' . preg_replace('/\{[a-zA-Z0-9_]+\}/', '([a-zA-Z0-9_]+)', $uri) . '$#';
+            if (strpos($route, '{')) {
+                $pattern = '#^' . preg_replace('/\{[a-zA-Z0-9_]+\}/', '([a-zA-Z0-9_]+)', $route) . '$#';
                 if (preg_match($pattern, $uri, $matches)) {
                     array_shift($matches);
                     if (is_callable($callback)) {
                         $response = $callback(...$matches);
                     } else if (is_array($callback) || is_object($callback)) {
-                        $controller = new $callback[0]();
+                        $controller = new $callback[0](self::$request);
                         $response = $controller->{$callback[1]}(...$matches);
                     }
                     self::Response($response);
@@ -112,7 +132,7 @@ class Route
                 if (is_callable($callback)) {
                     $response = $callback();
                 } else if (is_array($callback) || is_object($callback)) {
-                    $controller = new $callback[0]();
+                    $controller = new $callback[0](self::$request);
                     $response = $controller->{$callback[1]}();
                 }
                 self::Response($response);
@@ -121,6 +141,11 @@ class Route
         }
 
         http_response_code(404);
+        if (!file_exists('../resources/views/404.php')) {
+            self::Response(['message' => '404 - Not Found']);
+            return;
+        }
+
         ob_start();
         include '../resources/views/404.php';
         $content = ob_get_clean();

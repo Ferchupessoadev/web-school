@@ -1,122 +1,18 @@
 @charset "UTF-8";
 @import "./components/variables.scss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Oswald";
-  color: white;
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body::-webkit-scrollbar {
-  width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-  background: $color-school;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: rgb(104, 34, 34);
-  border-radius: 10px;
-  border: 1px solid $color-school;
-}
 
 @import "./components/nav.scss";
 @import "./components/nav-responsive.scss";
 @import "./components/presentation.scss";
 @import "./components/posts.scss";
-
+@import "./components/normalize.scss";
 
 /* diseño de la seccion de informacion de las tecnicaturas */
 @import "./components/article.scss";
 @import "./components/cards.scss";
 @import './components/news.scss';
 
-.section-news {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 90%;
-  min-height: 100vh;
-  padding: 10px;
-  margin: auto;
-  gap: 50px;
-
-  h5 {
-    font-size: 40px;
-    text-align: center;
-    font-family: $font-title;
-  }
-
-  .container-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-height: max-content;
-    gap: 50px;
-
-    .card {
-      width: 300px;
-      height: 300px;
-
-      .card__img-news {
-        width: 100%;
-        height: 200px;
-        background: rgba(0, 0, 0, .3);
-        object-fit: cover;
-      }
-
-      .card__p-title {
-        font-size: 19px;
-      }
-
-      .card__p-time {
-        color: rgb(188, 188, 188);
-        font-size: 12px;
-      }
-
-      .card__p-info {
-        height: 55px;
-        font-size: 17px;
-        overflow: hidden;
-      }
-    }
-  }
-
-  &__a-info {
-    text-decoration: none;
-    padding: 10px 30px;
-    width: max-content;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.1);
-    transition: background 0.2s ease;
-  }
-
-  &__a-info:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
-}
-
-// responsive de las noticias.
-@media only screen and (max-width:650px) {
-  .section-news {
-    width: 100%;
-
-    .container-flex {
-      width: inherit;
-
-      .card {
-        width: inherit;
-      }
-    }
-  }
-}
 
 .card-one,
 .section-fp {
@@ -137,7 +33,23 @@ body::-webkit-scrollbar-thumb {
 
 .card-one {
   text-align: center;
-
+  background:
+    radial-gradient(
+      circle at 50% -90%,
+      $primary,
+      $dark 80.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      $secondary,
+      $dark 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        $secondary,
+        $dark 70.71%
+      )
+      beige;
   .card__p-subtitle {
     font-size: 25px;
   }
@@ -152,8 +64,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url('../img/img-basic-cycle/img1.jpg') no-repeat center center/cover;
-  animation: cambiarImagen 20s infinite alternate ease;
+  background: url('../img/img-basic-cycle/img1.webp') no-repeat center center/cover;
+  animation: cambiarImagen 6s ease-in-out infinite alternate; 
 
   .bg-color {
     display: flex;
@@ -161,7 +73,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -263,23 +175,27 @@ body::-webkit-scrollbar-thumb {
 // TODO: images.
 @keyframes cambiarImagen {
   0% {
-    background: url('/assets/img/img-basic-cycle/img1.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img1.webp') no-repeat center center/cover;
   }
 
   25% {
-    background: url('/assets/img/img-basic-cycle/img2.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img1.webp') no-repeat center center/cover;
   }
 
   50% {
-    background: url('/assets/img/img-basic-cycle/img3.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img3.webp') no-repeat center center/cover;
   }
 
   75% {
-    background: url('/assets/img/img-basic-cycle/img4.png') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img3.webp') no-repeat center center/cover;
+  }
+
+  90% {
+    background: url('/assets/img/img-basic-cycle/img4.webp') no-repeat center center/cover;
   }
 
   100% {
-    background: url('/assets/img/img-basic-cycle/img5.jpg') no-repeat center center/cover;
+    background: url('/assets/img/img-basic-cycle/img4.webp') no-repeat center center/cover;
   }
 }
 @import './components/form_contact.scss';

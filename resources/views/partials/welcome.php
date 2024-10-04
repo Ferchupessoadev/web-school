@@ -29,5 +29,5 @@
 			</div>
 		</div>
 	</div>
-	<img class="section-school__img" src="/assets/img/banner.jpg" alt="puerta principal de la tecnica 2 independencia">
+	<img class="section-school__img" loading="lazy" src="/assets/img/banner.jpg" alt="puerta principal de la tecnica 2 independencia">
 </section>

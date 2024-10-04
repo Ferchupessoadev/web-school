@@ -2,9 +2,9 @@
 
 use App\Controllers\dashboardController;
 use App\Controllers\loginController;
-use app\Controllers\newsController;
-use app\view;
+use App\Controllers\newsController;
 use lib\Route;
+use lib\view;
 
 Route::get('/', function () {
     $data = [
@@ -98,10 +98,13 @@ Route::get('/contactanos', function () {
 
 // routes for news
 Route::get('/login', [loginController::class, 'index']);
+Route::get('/logout', [loginController::class, 'logout']);
+Route::post('/login', [loginController::class, 'login']);
+
 Route::get('/admin/dashboard', [dashboardController::class, 'index']);
 Route::get('/publicaciones', [newsController::class, 'index']);
 
 // dynamic routes
-Route::get('/publicaciones/{id}', [newsController::class, 'show']);
+Route::get('/publicaciones/{title}', [newsController::class, 'show']);
 
 Route::start();

@@ -3,25 +3,45 @@
   height: calc(100vh - 80px);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   gap: 10px;
+  background:
+    radial-gradient(
+      circle at 50% -80%,
+      $primary,
+      $dark 80.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      $secondary,
+      $dark 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        $secondary,
+        $dark 70.71%
+      )
+      beige;
 
   .container-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     font-family: $font-title, serif;
     font-weight: 600;
+    gap: 5px;
     padding: 0px 30px;
     height: 80%;
     width: 60%;
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
     border-radius: 10px;
+    text-align: justify;
 
     h1 {
       font-size: 35px;
-      color: $primary;
+      color: #fff;
     }
 
     p {
@@ -65,14 +85,35 @@
 
   .section-school__img {
     width: 40%;
-    height: 80%;
-    border-radius: 10px
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 4px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 0px 0px 2px 4px rgba(255,255,255,0.75);
+    -moz-box-shadow: 0px 0px 2px 4px rgba(255,255,255,0.75);
   }
 
   @media screen and (max-width: 992px) {
     flex-direction: column;
     height: max-content;
     min-height: calc(100vh - 80px);
+    background:
+      radial-gradient(
+        circle at 50% -90%,
+        $primary,
+        $dark 80.71%
+      ),
+      radial-gradient(
+        circle at 6.7% 75%,
+        $secondary,
+        $dark 70.71%
+      ),
+      radial-gradient(
+          circle at 93.3% 75%,
+          $secondary,
+          $dark 70.71%
+        )
+        beige;
 
     .container-text {
       width: 100%;

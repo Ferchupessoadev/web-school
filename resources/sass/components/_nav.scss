@@ -5,14 +5,14 @@
   align-items: center;
   background: transparent;
   padding: 10px 15px;
-  height: 120px;
-  z-index: 1000;
-  background: linear-gradient(to bottom, $secondary, $dark);
+  height: 80px;
+  z-index: 100;
+  background: $medium;
 
-  img {
+  & img {
     position: absolute;
     left: 50px;
-    cursor: pointer;
+    height: 65px;
   }
 
   .nav__ul {
@@ -24,7 +24,7 @@
     position: absolute;
     .nav__li {
       .nav__li-a {
-        font-size: 20px;
+        font-size: 17px;
         padding: 20px 15px;
         color: white;
         text-decoration: none;
